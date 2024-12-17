@@ -4,9 +4,9 @@ import { boolean, object, string } from "yup";
 import { Todo } from "@prisma/client";
 
 interface Segments {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 const getTodo = async (id: string): Promise<Todo | null> => {
@@ -20,7 +20,7 @@ const getTodo = async (id: string): Promise<Todo | null> => {
 };
 
 export async function GET(request: Request, { params }: Segments) {
-  const { id } = params;
+  const { id } = await params;
 
   const todo = await getTodo(id);
 
@@ -39,7 +39,7 @@ const putSchema = object({
 });
 
 export async function PUT(request: Request, { params }: Segments) {
-  const { id } = params;
+  const { id } = await params;
 
   const todo = await getTodo(id);
 
