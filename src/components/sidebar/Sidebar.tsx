@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiLogout } from "react-icons/ci";
 import {
+  IoBasketOutline,
   IoCalendarOutline,
   IoCheckboxOutline,
   IoCodeWorkingOutline,
@@ -31,6 +32,11 @@ const menuItems = [
     title: "Cookies",
     path: "/dashboard/cookies",
   },
+  {
+    icon: <IoBasketOutline size={30} />,
+    title: "Productos",
+    path: "/dashboard/products",
+  },
 ];
 
 export const Sidebar = () => {
@@ -50,7 +56,7 @@ export const Sidebar = () => {
 
         <div className="mt-8 text-center">
           <Image
-            src="https://media.licdn.com/dms/image/v2/D4E03AQFj_OYnCzNQpA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700085872893?e=1736985600&v=beta&t=bLreGPzPPlua99d50ktaEWqMYMLhRdOKuRlwEn1v01E"
+            src="https://img.freepik.com/vector-premium/diseno-avatar-persona_24877-38131.jpg"
             alt=""
             className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"
             width={150}

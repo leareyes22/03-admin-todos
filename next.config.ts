@@ -5,11 +5,15 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "media.licdn.com",
+        hostname: "img.freepik.com",
       },
       {
         protocol: "https",
         hostname: "static-00.iconduck.com",
+      },
+      {
+        protocol: "https",
+        hostname: "http2.mlstatic.com",
       },
     ],
   },
